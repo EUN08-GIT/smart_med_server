@@ -8,7 +8,7 @@ __pycache__/
 # Virtualenv
 .venv/
 venv/
-env/
+#env/
 
 # Django
 db.sqlite3
@@ -17,7 +17,7 @@ media/
 staticfiles/
 
 # Environment
-.env
+#.env
 
 # PyCharm
 .idea/
