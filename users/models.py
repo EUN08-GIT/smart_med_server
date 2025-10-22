@@ -6,7 +6,7 @@ class User(models.Model):
     gender = models.CharField(max_length=10, blank=True)
     phone = models.CharField(max_length=20, unique=True)
     preferences = models.JSONField(default=dict, blank=True)
-
+    weight = models.FloatField(null=True, blank=True)
     def __str__(self):
         return self.name
 

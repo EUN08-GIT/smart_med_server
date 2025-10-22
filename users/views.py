@@ -9,6 +9,11 @@ class UserViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
 
 class ProtectorViewSet(viewsets.ModelViewSet):
-    queryset = Protector.objects.all()
-    serializer_class = ProtectorSerializer
-    permission_classes = [IsAuthenticated]
+    """
+    보호자 CRUD API
+    - 인증된 사용자만 접근 가능
+    - Serializer를 통해 JSON 반환
+    """
+    queryset = Protector.objects.all() #모든 데이터(보호자데이터)를 조회
+    serializer_class = ProtectorSerializer # 응답에 ProtectorSerializer로 json으로 변환해줌
+    permission_classes = [IsAuthenticated] # 이건 인증된 사용자만 접근 가능

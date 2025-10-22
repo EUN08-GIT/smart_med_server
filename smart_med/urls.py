@@ -11,4 +11,5 @@ router.registry.extend(med_router.registry)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api/sensors/', include('sensors.urls')),
 ]
